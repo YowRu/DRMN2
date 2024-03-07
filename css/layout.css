@@ -1252,6 +1252,7 @@ header.scroll .top a.login {
 
     #service {
         height: 80vh;
+        padding-bottom: 20vh;
     }
 
     #service img {
@@ -1299,6 +1300,7 @@ header.scroll .top a.login {
 
     #service {
         height: 60vh;
+        padding-bottom: 12vh;
     }
 
     #service img {
