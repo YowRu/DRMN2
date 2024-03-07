@@ -5,6 +5,76 @@
     padding: 0;
 }
 
+/**/
+.headerCover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(-45deg, #332DFD, #1DA1F2, #41D6FE, #32e2df);
+    background-size: 400% 400%;
+    animation: gradient 15s ease;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+
+.headerCover .quote {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.headerCover .quote .char {
+    display: inline-block;
+    letter-spacing: 2px;
+    font-family: 'Moon Dance';
+    opacity: 0;
+}
+
+.headerCover .loadingBar {
+    position: relative;
+    margin-top: 20px;
+    width: 100vw;
+    height: 1px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.368);
+    overflow: hidden;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.headerCover .loadingBar .loadingValue {
+    position: absolute;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1dccfa+1,075aea+100 */
+    background: linear-gradient(to right, #e2f9ff 1%, #075aea 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background-size: 400% 400%;
+    animation: loadingBar 15s ease;
+    width: 0;
+    height: 10px;
+}
+
+
+
+/**/
+
+
 body ul,
 body ol,
 body li {
