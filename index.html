@@ -207,14 +207,6 @@
       let oneH = $('#product .flex.one').height();
       $('.imgWp img').height(oneH);
 
-
-      //service
-      $('#service').height($('#service img').height());
-
-      if ($W <= 500) {
-          $('#service').height(600);
-      }
-
       function replaceImage() {
 
           if ($W < 500) {
@@ -280,14 +272,6 @@
           autoplayTimeout: 2000,
           autoplayHoverPause: true
       });
-
-
-
-      if ($W <= 500) {
-          $('#service').height($W + 200);
-      } else {
-          $('#service').height($H);
-      }
 
       //map
       let map;
