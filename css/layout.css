@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Noto+Sans+TC:wght@300&family=Noto+Serif+TC&family=Playfair+Display:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -32,7 +33,8 @@
     display: inline-block;
     letter-spacing: 2px;
     font-family: 'Moon Dance';
-    font-family: "Inter", sans-serif;
+    font-size: 3rem;
+    font-weight: bolder;
     opacity: 0;
 }
 
@@ -1018,6 +1020,10 @@ header.scroll .top a.login {
 }
 
 @media(max-width:800px) {
+    .headerCover .quote .char {
+        font-size: 2rem;
+    }
+
     header {
         padding: 0;
     }
@@ -1310,6 +1316,10 @@ header.scroll .top a.login {
 }
 
 @media(max-width:500px) {
+    .headerCover .quote .char {
+        font-size: 1.8rem;
+    }
+
     header {
         justify-content: center;
     }
