@@ -28,10 +28,9 @@
     </div>
     <header></header>
     <div id="main">
-        <div class="banner">
+        <div class="banner" id="banner">
             <p class="title white" id="str"></p>
-            <!-- <div> -->
-            <div data-aos="fade-up" data-aos-easing='ease-in' data-aos-duration="2000" data-aos-delay='2000'>
+            <div>
                 <p class="en white">RMN was created to serve the advertising of the retail industry and is an
                     advertising method more suitable for the retail industry.</p>
                 <a href="#case">learn more</a>
@@ -143,64 +142,64 @@
         </div>
         <div id="case">
             <p class="title">Case</p>
-            <div class="logoWp">
+            <div class="logoWp" id="logoWp">
                 <ul class="flex">
-                    <li>
+                    <li id="one">
                         <img src="img/logo/bike.svg" />
                     </li>
-                    <li>
+                    <li id="two">
                         <img src="img/logo/chanchao.svg" />
                     </li>
-                    <li>
+                    <li id="three">
                         <img src="img/logo/chihlee.svg" />
                     </li>
-                    <li>
+                    <li id="four">
                         <img src="img/logo/gis.svg" />
                     </li>
-                    <li>
+                    <li id="five">
                         <img src="img/logo/topLink.svg" />
                     </li>
-                    <li>
+                    <li id="six">
                         <img src="img/logo/rcsa.svg" />
                     </li>
                 </ul>
             </div>
-            <div class="owl-carousel">
-                <div class="item"><img src="img/case/C1_1.jpg" /></div>
-                <div class="item"><img src="img/case/C1_2.jpg" /></div>
-                <div class="item"><img src="img/case/C1_3.jpg" /></div>
-                <div class="item"><img src="img/case/C1_5.jpg" /></div>
-                <div class="item"><img src="img/case/C2_1.jpg" /></div>
-                <div class="item"><img src="img/case/C2_2.jpg" /></div>
-                <div class="item"><img src="img/case/C3_1.jpg" /></div>
-                <div class="item"><img src="img/case/C3_2.jpg" /></div>
-                <div class="item"><img src="img/case/C4_1.jpg" /></div>
-                <div class="item"><img src="img/case/C4_2.jpg" /></div>
-                <div class="item"><img src="img/case/C4_3.jpg" /></div>
-                <div class="item"><img src="img/case/C4_4.jpg" /></div>
-                <div class="item"><img src="img/case/C4_5.jpg" /></div>
-                <div class="item"><img src="img/case/C5_1.jpg" /></div>
-                <div class="item"><img src="img/case/C5_2.jpg" /></div>
-                <div class="item"><img src="img/case/C5_3.jpg" /></div>
-                <div class="item"><img src="img/case/C6_3.jpg" /></div>
-                <div class="item"><img src="img/case/C6_4.jpg" /></div>
+        </div>
+        <div class="owl-carousel">
+            <div class="item"><img src="img/case/C1_1.jpg" /></div>
+            <div class="item"><img src="img/case/C1_2.jpg" /></div>
+            <div class="item"><img src="img/case/C1_3.jpg" /></div>
+            <div class="item"><img src="img/case/C1_5.jpg" /></div>
+            <div class="item"><img src="img/case/C2_1.jpg" /></div>
+            <div class="item"><img src="img/case/C2_2.jpg" /></div>
+            <div class="item"><img src="img/case/C3_1.jpg" /></div>
+            <div class="item"><img src="img/case/C3_2.jpg" /></div>
+            <div class="item"><img src="img/case/C4_1.jpg" /></div>
+            <div class="item"><img src="img/case/C4_2.jpg" /></div>
+            <div class="item"><img src="img/case/C4_3.jpg" /></div>
+            <div class="item"><img src="img/case/C4_4.jpg" /></div>
+            <div class="item"><img src="img/case/C4_5.jpg" /></div>
+            <div class="item"><img src="img/case/C5_1.jpg" /></div>
+            <div class="item"><img src="img/case/C5_2.jpg" /></div>
+            <div class="item"><img src="img/case/C5_3.jpg" /></div>
+            <div class="item"><img src="img/case/C6_3.jpg" /></div>
+            <div class="item"><img src="img/case/C6_4.jpg" /></div>
+        </div>
+        <div id="contact">
+            <div class="left">
+                <div class="title">Contact Us</div>
+                <p class="small">Feel free to contact us any time, we will get back to you as soon as we can.</p>
+                <p class="border">
+                    <span>Telephone</span>
+                    <span>02-25851098</span>
+                </p>
+                <p class="border nomargin">
+                    <span>Email</span>
+                    <a href="mailto:service@drmn.com.tw">service@drmn.com.tw</a>
+                </p>
             </div>
-            <div id="contact">
-                <div class="left">
-                    <div class="title">Contact Us</div>
-                    <p class="small">Feel free to contact us any time, we will get back to you as soon as we can.</p>
-                    <p class="border">
-                        <span>Telephone</span>
-                        <span>02-25851098</span>
-                    </p>
-                    <p class="border nomargin">
-                        <span>Email</span>
-                        <a href="mailto:service@drmn.com.tw">service@drmn.com.tw</a>
-                    </p>
-                </div>
-                <div class="right">
-                    <div id="map"></div>
-                </div>
+            <div class="right">
+                <div id="map"></div>
             </div>
         </div>
     </div>
@@ -222,30 +221,34 @@
             }, 1000); // 1000 毫秒 = 1 秒
 
 
-            //
+            //bar
             const quote = document.getElementById('quote');
             quote.innerHTML = `<span class="char">${quote.innerHTML.split("").join('</span><span class="char">')}</span>`;
             TweenMax.staggerTo(".char", 0.5, { opacity: 1, yPercent: 50, }, 0.1);
 
             // header cover: website enter animation
-            // const headerCover = gsap.timeline();
-            // headerCover.to(".loadingValue", 2, { width: "100%" })
-            //     .to(".loadingBar", 0.1, { display: 'none' })
-            //     .to(".quote", 0.1, { display: 'none' })
-            //     .to(".headerCover", 0.5, { height: 0 })
             const headerCover = gsap.timeline();
-headerCover.to(".loadingValue", 2, { width: "100%" })
-    .to(".loadingBar", 0.1, { display: 'none' })
-    .to(".quote", 0.1, { display: 'none' })
-    .to(".headerCover", 0.5, { opacity: 0, onComplete: function() {
-        // 在淡出完成後可能需要額外的操作
-        // 可以在 onComplete 函數中添加
-        // 例如：將元素的 display 屬性設置為 'none'
-        gsap.set(".headerCover", { display: 'none' });
-    }});
+            headerCover.to(".loadingValue", 2, { width: "100%" })
+                .to(".loadingBar", 0.1, { display: 'none' })
+                .to(".quote", 0.1, { display: 'none' })
+                .to(".headerCover", 0.5, {
+                    opacity: 0, onComplete: function () {
+                        // 在淡出完成後可能需要額外的操作
+                        // 可以在 onComplete 函數中添加
+                        // 例如：將元素的 display 屬性設置為 'none'
+                        gsap.set(".headerCover", { display: 'none' });
+                    }
+                });
 
-                
-            //title typing
+            // 預先加載背景圖
+            var img = new Image();
+            img.onload = function () {
+                // 圖片加載完成後顯示 banner
+                document.getElementById('banner').style.display = 'flex';
+            };
+            img.src = 'img/banner2.webp'; // 背景圖片的 URL
+
+            //banner typing
             function typing() {
                 /*typing text*/
                 let $text = 'Retail Media Network'
@@ -261,7 +264,7 @@ headerCover.to(".loadingValue", 2, { width: "100%" })
             setTimeout(typing, 2500);
 
             //animation
-            AOS.init();
+            // AOS.init();
 
             //Carousel
             let owl = $('.owl-carousel');
@@ -315,7 +318,6 @@ headerCover.to(".loadingValue", 2, { width: "100%" })
             }
 
             initMap();
-
 
 
         });
