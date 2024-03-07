@@ -32,6 +32,7 @@
     display: inline-block;
     letter-spacing: 2px;
     font-family: 'Moon Dance';
+    font-family: "Inter", sans-serif;
     opacity: 0;
 }
 
