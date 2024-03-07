@@ -232,24 +232,7 @@
                 .to(".quote", 0.1, { display: 'none' })
                 .to(".headerCover", 0.5, { height: 0 })
 
-            //service replace img
-            function replaceImage() {
-
-                if ($W < 500) {
-                    $('#sImg').attr('src', 'img/phone.webp');
-                } else {
-                    $('#sImg').attr('src', 'img/phone_PC.webp');
-                }
-            }
-
-            // 初始化時替換圖像
-            replaceImage();
-
-            // 窗口大小改變時替換圖像
-            $(window).resize(function () {
-                replaceImage();
-            });
-
+                
             //title typing
             function typing() {
                 /*typing text*/
