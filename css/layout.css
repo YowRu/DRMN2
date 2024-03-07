@@ -367,6 +367,7 @@ header.scroll .top a.login {
     transition: all .8s;
     display: block;
     width: 80px;
+    opacity: 0;
 }
 
 #main .banner a:hover {

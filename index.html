@@ -207,6 +207,10 @@
       let oneH = $('#product .flex.one').height();
       $('.imgWp img').height(oneH);
 
+      setTimeout(function() {
+        $('a[href="#case"]').fadeIn().css('opacity', '1');
+    }, 1000); // 1000 毫秒 = 1 秒
+
       function replaceImage() {
 
           if ($W < 500) {
