@@ -612,7 +612,6 @@ header.scroll .top a.login {
     background: linear-gradient(to bottom, #acbaee 0%, #5b76d7 100%);
     width: 100%;
     height: 900px;
-    overflow: hidden;
 }
 
 #service img {
@@ -800,10 +799,6 @@ header.scroll .top a.login {
 }
 
 @media(max-width:1280px) {
-    /* #case .logoWp .flex li:last-child {
-        opacity: 0;
-        display: block;
-    } */
 
     #case .logoWp .flex li {
         width: 24%;
@@ -1061,6 +1056,11 @@ header.scroll .top a.login {
         width: 40%;
     }
 
+    #service img {
+        height: 60vh;
+        padding-top: 15vh;
+    }
+
     #case {
         padding: 50px 0;
     }
@@ -1112,6 +1112,12 @@ header.scroll .top a.login {
 }
 
 @media(max-width:555px) {
+
+    #service img {
+        height: 55vh;
+        padding-top: 20vh;
+    }
+
     #case .flex {
         width: 95%;
     }
@@ -1246,36 +1252,9 @@ header.scroll .top a.login {
         width: 80%;
     }
 
-    /* #service::before {
-        content: '';
-        background: url('../img/phone.svg') no-repeat center 0;
-        background-size: contain;
-        width: 200%;
-        margin-left: -50%;
-        animation-name: imgM;
-        animation-duration: 3s;
-        overflow-x: hidden;
-    }
-
-    @keyframes imgM {
-        from {
-            background: url('../img/phone.svg') no-repeat center 0;
-            background-size: contain;
-            width: 100%;
-            margin-left: 100%;
-        }
-
-        to {
-            background: url('../img/phone.svg') no-repeat center 0;
-            background-size: contain;
-            width: 200%;
-            margin-left: -50%;
-        }
-    } */
-
     #service img {
-        padding-top: 25%;
-        height: 60%;
+        padding-top: 11vh;
+        height: 40vh;
     }
 }
 
