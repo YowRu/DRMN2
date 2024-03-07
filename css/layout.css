@@ -297,20 +297,15 @@ header.scroll .top a.login {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1500px;
-    width: 90%;
+    width: 100%;
+    height: 100vh;
     margin: 0 auto;
+    background: url('../img/banner2.webp') no-repeat center;
+    background-size: cover;
 }
 
 #main .banner img {
     height: 77px;
-}
-
-#main .bannerWp {
-    width: 100%;
-    margin: 0;
-    background: url('../img/banner2.webp') no-repeat center;
-    background-size: cover;
 }
 
 #main .banner p {
@@ -550,7 +545,7 @@ header.scroll .top a.login {
 .imgWp img {
     display: block;
     margin: 0 auto;
-    height: 300px;
+    height: 80vh;
 }
 
 #main .row2 .flex img {
@@ -886,6 +881,10 @@ header.scroll .top a.login {
     #case .logoWp .flex img {
         height: 80px;
     }
+
+    #main .flex p img {
+        width: 66px;
+    }
 }
 
 @media(max-width:900px) {
@@ -908,6 +907,8 @@ header.scroll .top a.login {
     #main p {
         width: 96%;
     }
+
+
 
     #product .flex .item {
         width: 30%;
@@ -1124,6 +1125,9 @@ header.scroll .top a.login {
         height: 96px;
     }
 
+    #main .flex p img {
+        width: 48px;
+    }
 }
 
 @media(max-width:550px) {
