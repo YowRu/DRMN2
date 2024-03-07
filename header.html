@@ -1,0 +1,172 @@
+<div class="WP">
+    <div class="left">
+        <nav>
+            <span></span>
+            <span></span>
+            <span></span>
+        </nav>
+        <a href="index.html" class="logo">
+            <h1>logo</h1>
+        </a>
+    </div>
+    <div class="right">
+        <a href="#about">About us</a>
+        <a href="#product">Product</a>
+        <a href="#service">Service</a>
+        <a href="#case">Case</a>
+        <a href="#contact">Contact us</a>
+    </div>
+    <div class="menu">
+        <img src="img/x-close.png" alt="" class="close">
+        <a href="#about" class="top">About us</a>
+        <a href="#product">Product</a>
+        <a href="#service">Service</a>
+        <a href="#case">Case</a>
+        <a href="#contact">Contact us</a>
+    </div>
+</div>
+<div class="bg"></div>
+<script>
+    $(document).ready(function () {
+        let $H = $(window).height();
+        let $W = $(window).width();
+
+        let h = $('header .row1 .menu').height();
+        if ($H - 40 < h) {
+            $('header .row1 .menu').css({ 'overflow-y': 'scroll' });
+        }
+
+        //resize   
+        $(window).resize(function () {
+            let $H = $(window).height();
+            let $W = $(window).width();
+            $('header .menu').animate({
+                'marginLeft': 0
+            }, 0);
+            $('header .left').css({ 'display': 'block' });
+            $('header .bg').hide();
+            $('body').css('overflow-y', 'auto');
+            $('#main').removeClass('sliderDown').removeClass('menuOpen');
+
+            if (600 > $H) {
+                $('header .menu a').css({ 'line-height': '55px' });
+            }
+        });
+
+        //header
+
+        // $(document).scroll(function () {
+        //     if ($(this).scrollTop() > 80) {
+        //         $('header').addClass('scroll');
+        //     } else {
+        //         $('header').removeClass('scroll');
+        //     }
+        // });
+
+        let header = $('header');
+        let scrollThreshold = 80;
+
+        $(document).scroll(function () {
+            if ($(this).scrollTop() > scrollThreshold) {
+                header.addClass('scroll');
+            } else {
+                header.removeClass('scroll');
+            }
+        });
+
+        /*menu*/
+        $('header nav').click(function () {
+            if ($W < 450) {
+                $('header .menu').css({ 'left': '-270px', 'width': '270px' });
+                $('header .menu').show().animate({
+                    'marginLeft': 270,
+                }, 500);
+            } else {
+                $('header .menu').show().animate({
+                    'marginLeft': 320,
+                }, 500);
+            }
+            $('header .menu .close').addClass('animation');
+            $('header .bg').show();
+            $('body').css('overflow', 'hidden');
+        });
+        $('header .menu .close').click(function () {
+            $('header .menu').animate({
+                'marginLeft': 0
+            }, 500);
+            $('body').css('overflow-y', 'auto');
+            $('header .menu .close').removeClass('animation');
+            $('header .bg').hide();
+        });
+
+        $('header .menu a').click(function () {
+            $('header .menu').slideUp();
+            $('header .bg').hide();
+            $("body").removeClass('menuOpen');
+            $('header').removeClass('open');
+            $('body').css('overflow-y', 'auto');
+        });
+
+        //href
+        let url = location.href;
+        let ary = url.split('/');
+
+        $('a[href="#about"]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#about').offset().top - 111
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#about').offset().top - 80
+                }, 800);
+            }
+        }
+        );
+
+        $('a[href="#product"]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#product').offset().top - 111
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#product').offset().top - 80
+                }, 800);
+            }
+        });
+        $('a[href="#service"]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#service').offset().top - 111
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#service').offset().top - 80
+                }, 800);
+            }
+        });
+        $('a[href="#case"]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#case').offset().top - 111
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#case').offset().top - 80
+                }, 800);
+            }
+        });
+        $('a[href="#contact"]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#contact').offset().top - 111
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#contact').offset().top - 80
+                }, 800);
+            }
+        });
+    });
+</script>
