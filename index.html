@@ -228,8 +228,8 @@
             // header cover: website enter animation
             const headerCover = gsap.timeline();
             headerCover.to(".loadingValue", 2, { width: "100%" })
-                .to(".loadingBar", 0.1, { opacity: 0 })
-                .to(".quote", 0.1, { opacity: 0 })
+                .to(".loadingBar", 0.1, { display: 'none' })
+                .to(".quote", 0.1, { display: 'none' })
                 .to(".headerCover", 0.5, { height: 0 })
 
             //service replace img
