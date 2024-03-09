@@ -289,7 +289,7 @@ header nav {
     display: none;
     position: absolute;
     left: 25px;
-    top: 13px;
+    top: 14px;
 }
 
 header nav span {
@@ -307,15 +307,12 @@ header.scroll nav span {
 }
 
 header nav span:nth-of-type(1) {
-    top: 2px;
+    top: 8px;
 }
 
 header nav span:nth-of-type(2) {
-    top: 12px;
-}
-
-header nav span:nth-of-type(3) {
-    top: 22px;
+    top: 20px;
+    width: 16px;
 }
 
 .menuOpen header nav span:nth-of-type(1) {
