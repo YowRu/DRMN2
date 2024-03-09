@@ -1128,6 +1128,11 @@ header.scroll .top a.login {
 }
 
 @media(max-width:700px) {
+    #about, #banner, #product, #service, #case {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
     #main .flex {
         width: 100%;
         flex-wrap: wrap;
@@ -1359,7 +1364,7 @@ header.scroll .top a.login {
     }
 
     #service img {
-        width: 95vw;
+        width: 95%;
         height: auto;
         padding-top: 15vh;
     }
@@ -1407,7 +1412,7 @@ header.scroll .top a.login {
     }
 
     #service img {
-        width: 90vw;
+        width: 90%;
         padding-top: 9vh;
     }
 }
